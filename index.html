@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debbie — Actress &amp; Comedian</title>
+  <meta name="description" content="Debbie — Argentine-born, London-based actress and comedian. Film, TV, stage, stand-up and voiceover. Bilingual in English and Spanish." />
+  <meta name="theme-color" content="#0E0E0E" />
+
+  <!-- Share preview (WhatsApp, LinkedIn, Facebook, X). Replace the URL once the site is live. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Debbie — Actress &amp; Comedian" />
+  <meta property="og:description" content="Actress · Comedian · Storyteller. From Buenos Aires to London." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="navbar" aria-label="Main">
+  <a class="nav-logo" href="#hero">DEBBIE</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" data-i18n="nav-about">About</a></li>
+    <li><a href="#showreel" data-i18n="nav-watch">Watch me work</a></li>
+    <li><a href="#credits" data-i18n="nav-credits">Spotlight</a></li>
+    <li><a href="#testimonials" data-i18n="nav-press">Press</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav-book">Book Me</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text" aria-hidden="true">HA</div>
+  <div class="hero-content">
+    <div class="hero-tag" data-i18n="hero-tag">✦ Based in London · Available worldwide</div>
+    <h1 class="hero-name">DEB<br><span>BIE</span></h1>
+    <p class="hero-sub" data-i18n="hero-sub">Actress · Comedian · Storyteller.<br>From Buenos Aires to London — making audiences laugh, cry, and question everything since 2017.</p>
+    <div class="hero-btns">
+      <a href="#showreel" class="btn btn-primary" data-i18n="btn-watch">▶ Watch My Reel</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="btn-contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <div class="hero-photo-frame"><img src="images/hero-tomatoes.jpg" alt="Debbie on stage with a microphone, dodging flying tomatoes" width="852" height="1280" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" /></div>
+    <div class="frame-deco"></div>
+    <div class="hero-badges">
+      <div class="badge" data-i18n="badge-film">🎬 Film</div>
+      <div class="badge">📺 TV</div>
+      <div class="badge">🎤 Stand-Up</div>
+      <div class="badge">🇦🇷 Buenos Aires</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span data-i18n="t-actress">ACTRESS</span><span class="dot">✦</span>
+    <span data-i18n="t-comedian">COMEDIAN</span><span class="dot">✦</span>
+    <span data-i18n="t-storyteller">STORYTELLER</span><span class="dot">✦</span>
+    <span data-i18n="t-performer">PERFORMER</span><span class="dot">✦</span>
+    <span data-i18n="t-improviser">IMPROVISER</span><span class="dot">✦</span>
+    <span data-i18n="t-writer">WRITER</span><span class="dot">✦</span>
+    <span data-i18n="t-actress">ACTRESS</span><span class="dot">✦</span>
+    <span data-i18n="t-comedian">COMEDIAN</span><span class="dot">✦</span>
+    <span data-i18n="t-storyteller">STORYTELLER</span><span class="dot">✦</span>
+    <span data-i18n="t-performer">PERFORMER</span><span class="dot">✦</span>
+    <span data-i18n="t-improviser">IMPROVISER</span><span class="dot">✦</span>
+    <span data-i18n="t-writer">WRITER</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text">
+    <div class="section-label" data-i18n="sec-about">About</div>
+    <h2 data-i18n="about-h2">THE WOMAN.<br>THE MYTH.<br>THE <span style="color:var(--yellow)">LAUGHS.</span></h2>
+    <p style="margin-top:1.5rem" data-i18n="about-p1">Debbie is an Argentine-born actress and comedian who now calls London home. With a knack for finding the funny in the heartbreaking and the heart in the hilarious, she brings a unique cross-cultural perspective to every stage and screen.</p>
+    <p data-i18n="about-p2">From Buenos Aires to London's vibrant comedy scene, Debbie has honed her craft across continents — delivering performances full of warmth, wit, and disarming honesty.</p>
+    <div class="skills-list">
+      <span class="skill-tag">Stand-Up</span>
+      <span class="skill-tag" data-i18n="sk-improv">Improv</span>
+      <span class="skill-tag" data-i18n="sk-present">Presenting</span>
+      <span class="skill-tag" data-i18n="sk-musical">Musical Theatre</span>
+      <span class="skill-tag" data-i18n="sk-jazz">Jazz Dance</span>
+      <span class="skill-tag" data-i18n="sk-mezzo">Mezzo-Soprano</span>
+      <span class="skill-tag" data-i18n="sk-lang">Spanish &amp; English</span>
+      <span class="skill-tag" data-i18n="sk-accent">Latin American Accent</span>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box reveal"><div class="stat-num">18</div><div class="stat-label" data-i18n="stat-years">Years performing</div></div>
+      <div class="stat-box reveal"><div class="stat-num">20+</div><div class="stat-label" data-i18n="stat-credits">Credits</div></div>
+      <div class="stat-box reveal"><div class="stat-num">2</div><div class="stat-label" data-i18n="stat-lang">Languages</div></div>
+      <div class="stat-box reveal"><div class="stat-num">22.3k</div><div class="stat-label" data-i18n="stat-social">Social followers</div></div>
+    </div>
+  </div>
+  <div class="about-visual">
+    <blockquote class="quote-block">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p>She walks into a room and you already want to know her story. When she speaks, you can't look away.</p>
+      <cite>— Variety Magazine</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- SHOWREEL -->
+<section id="showreel">
+  <div class="section-label" data-i18n="sec-reel">Showreel</div>
+  <h2 data-i18n="reel-h2">WATCH ME <span style="color:var(--pink)">WORK</span></h2>
+  <p class="sub" data-i18n="reel-sub">Click any clip to watch — reel, shorts, and stage sets.</p>
+  <div class="reel-grid">
+    <button type="button" class="reel-card reveal" data-video="acting">
+      <div class="reel-thumb c1"><img src="images/reel-acting.jpg" alt="" loading="lazy" /></div>
+      <div class="reel-overlay"><div class="play-btn"></div></div>
+      <div class="reel-info"><div class="reel-title" data-i18n="reel1-title">Acting</div><div class="reel-type" data-i18n="reel1-type">Film · TV · Drama</div></div>
+    </button>
+    <button type="button" class="reel-card reveal" data-video="standup">
+      <div class="reel-thumb c2"><img src="images/reel-standup.jpg" alt="" loading="lazy" /></div>
+      <div class="reel-overlay"><div class="play-btn"></div></div>
+      <div class="reel-info"><div class="reel-title">Stand-Up</div><div class="reel-type" data-i18n="reel2-type">Live Comedy</div></div>
+    </button>
+    <button type="button" class="reel-card reveal" data-video="hosting">
+      <div class="reel-thumb c3"><img src="images/reel-hosting.jpg" alt="" loading="lazy" /></div>
+      <div class="reel-overlay"><div class="play-btn"></div></div>
+      <div class="reel-info"><div class="reel-title" data-i18n="reel3-title">Hosting</div><div class="reel-type" data-i18n="reel3-type">Events · Presenting</div></div>
+    </button>
+  </div>
+</section>
+
+<!-- CREDITS -->
+<!-- CREDITS -->
+<section id="credits">
+  <div class="section-label" data-i18n="sec-credits">Spotlight</div>
+  <h2 data-i18n="credits-h2">SELECTED <span style="color:var(--teal)">WORKS</span></h2>
+
+  <!-- Highlights: the 8 strongest / most recent credits -->
+  <div class="credits-grid" style="margin-top:2.5rem">
+    <div class="credit-card reveal"><span class="credit-type type-comedy">Stand-Up</span><div class="credit-title">Stand Up Argie In London</div><div class="credit-role">Comedian / Actress</div><div class="credit-year">London · 2022</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-ad" data-i18n="type-ad">Commercial</span><div class="credit-title">Vitality</div><div class="credit-role">Walk On Mum</div><div class="credit-year">Vitality · 2021</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-tv">TV</span><div class="credit-title">Trasnoche 26</div><div class="credit-role" data-i18n="role-corresp">Correspondent</div><div class="credit-year">Canal 26 · 2021</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-tv">Radio</span><div class="credit-title">Body &amp; Health</div><div class="credit-role" data-i18n="role-radio">Radio Presenter</div><div class="credit-year">House New York Radio · 2021</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-ad" data-i18n="type-model">Modelling</span><div class="credit-title">Cannon UK</div><div class="credit-role" data-i18n="role-mainmodel">Main Model</div><div class="credit-year">Cannon · 2021</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-tv">TV</span><div class="credit-title">A Partir de Hoy</div><div class="credit-role" data-i18n="role-actress">Actress</div><div class="credit-year">Magazine TV · 2018</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-stage" data-i18n="type-stage">Stage</span><div class="credit-title">Experimento Kandel</div><div class="credit-role" data-i18n="role-actress">Actress</div><div class="credit-year">AbranCancha · 2014</div></div>
+    <div class="credit-card reveal"><span class="credit-type type-film" data-i18n="type-film">Film</span><div class="credit-title">Nada Puede Malir Sal</div><div class="credit-role" data-i18n="role-actress">Actress</div><div class="credit-year">Globo Rojo · 2010</div></div>
+  </div>
+
+  <!-- Full list: hidden until clicked (<details> needs no JavaScript) -->
+  <details class="full-credits">
+    <summary data-i18n="credits-all">See all credits</summary>
+
+    <h3 data-i18n="cat-stage">Theatre</h3>
+    <ul class="credit-list">
+      <li><span>2014</span><span><b>Experimento Kandel</b>Actress</span><span>AbranCancha</span></li>
+      <li><span>2011</span><span><b>Fuera de Quicio</b>Actress</span><span>Ines Baum</span></li>
+      <li><span>2010</span><span><b>Chicago, El Musical (Remake)</b>Actress</span><span>Gabriela Mistral</span></li>
+      <li><span>2010</span><span><b>Hairspray (Remake)</b>Actress</span><span>Gabriela Mistral</span></li>
+      <li><span>2009</span><span><b>Rent (Remake)</b>Musical Ensemble</span><span>Logomakia</span></li>
+      <li><span>2008</span><span><b>Smokey Joe's Cafe (Remake)</b>Musical Ensemble</span><span>Reina Reech</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-film">Film</h3>
+    <ul class="credit-list">
+      <li><span>2017</span><span><b>Into Me See</b>Extra</span><span>Yolanda Barker</span></li>
+      <li><span>2010</span><span><b>Nada Puede Malir Sal</b>Actress</span><span>Globo Rojo</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-tv">Television</h3>
+    <ul class="credit-list">
+      <li><span>2021</span><span><b>Trasnoche 26</b>Correspondent</span><span>Canal 26</span></li>
+      <li><span>2019</span><span><b>A Cantar!</b>Extra</span><span>Extra People</span></li>
+      <li><span>2018</span><span><b>A Partir de Hoy</b>Actress</span><span>Magazine TV</span></li>
+      <li><span>2017</span><span><b>Coming In America</b>Extra</span><span>TalkBack</span></li>
+      <li><span>2010</span><span><b>Para Vestir Santos</b>Extra</span><span>Pol-Ka Producciones</span></li>
+      <li><span>2010</span><span><b>Casi Ángeles</b>Extra</span><span>Cris Morena Group</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-comedy">Comedy &amp; Improv</h3>
+    <ul class="credit-list">
+      <li><span>2022</span><span><b>Stand Up Argie In London</b>Comedian / Actress</span><span>London</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-ads">Commercials &amp; Modelling</h3>
+    <ul class="credit-list">
+      <li><span>2021</span><span><b>Vitality</b>Walk On Mum</span><span>Vitality</span></li>
+      <li><span>2021</span><span><b>Cannon UK</b>Main Model</span><span>Cannon</span></li>
+      <li><span>2013</span><span><b>Hablamos sin saber, hablamos gratis</b>Extra</span><span>Movistar Argentina</span></li>
+      <li><span>2012</span><span><b>Riquelme está feliz – Pepsi &amp; Lays</b>Extra Dancer</span><span>Muu Cine</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-voice">Radio &amp; Presenting</h3>
+    <ul class="credit-list">
+      <li><span>2021</span><span><b>Body &amp; Health</b>Radio Presenter</span><span>House New York Radio</span></li>
+    </ul>
+
+    <h3 data-i18n="cat-video">Music Video</h3>
+    <ul class="credit-list">
+      <li><span>2015</span><span><b>The Fontanas</b>Dancer</span><span>Movimientos</span></li>
+      <li><span>2010</span><span><b>Algo Raro Pasó / Rompamos La Copa</b>Dancer</span><span>Garbino Producciones</span></li>
+    </ul>
+  </details>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label" data-i18n="sec-press">Press &amp; Reviews</div>
+  <h2 data-i18n="press-h2">THEY SAID IT, <span style="color:var(--orange)">NOT ME</span></h2>
+  <div style="margin-top:2.5rem; overflow:hidden;">
+    <div class="testimonial-scroll">
+      <div class="tcard"><div class="tcard-stars" aria-label="5 stars">★★★★★</div><p class="tcard-text">"Debbie is the real deal — she can break your heart and have you laughing within the same minute."</p><div class="tcard-author"><div class="author-avatar" style="background:#3d0a2e">🗞️</div><div><div class="author-name">Variety</div><div class="author-role">Film Review, 2024</div></div></div></div>
+      <div class="tcard"><div class="tcard-stars" aria-label="5 stars">★★★★★</div><p class="tcard-text">"Her stand-up is electric. She weaponizes vulnerability and it destroys the audience every time."</p><div class="tcard-author"><div class="author-avatar" style="background:#0a2e2e">🎙️</div><div><div class="author-name">The AV Club</div><div class="author-role">Comedy Special, 2023</div></div></div></div>
+      <div class="tcard"><div class="tcard-stars" aria-label="4.5 stars">★★★★½</div><p class="tcard-text">"Watching her on stage is like watching someone both fall apart and pull themselves together in real time."</p><div class="tcard-author"><div class="author-avatar" style="background:#2e1a00">🎭</div><div><div class="author-name">LA Times</div><div class="author-role">Theater Review, 2023</div></div></div></div>
+      <div class="tcard"><div class="tcard-stars" aria-label="5 stars">★★★★★</div><p class="tcard-text">"Debbie's comedic timing is impeccable — she finds the joke in every silence. A genuine rising star."</p><div class="tcard-author"><div class="author-avatar" style="background:#002e1a">📺</div><div><div class="author-name">IndieWire</div><div class="author-role">TV Roundup, 2024</div></div></div></div>
+      <!-- duplicates so the scroll loops seamlessly (hidden from screen readers) -->
+      <div class="tcard" aria-hidden="true"><div class="tcard-stars">★★★★★</div><p class="tcard-text">"Debbie is the real deal — she can break your heart and have you laughing within the same minute."</p><div class="tcard-author"><div class="author-avatar" style="background:#3d0a2e">🗞️</div><div><div class="author-name">Variety</div><div class="author-role">Film Review, 2024</div></div></div></div>
+      <div class="tcard" aria-hidden="true"><div class="tcard-stars">★★★★★</div><p class="tcard-text">"Her stand-up is electric. She weaponizes vulnerability and it destroys the audience every time."</p><div class="tcard-author"><div class="author-avatar" style="background:#0a2e2e">🎙️</div><div><div class="author-name">The AV Club</div><div class="author-role">Comedy Special, 2023</div></div></div></div>
+      <div class="tcard" aria-hidden="true"><div class="tcard-stars">★★★★½</div><p class="tcard-text">"Watching her on stage is like watching someone both fall apart and pull themselves together in real time."</p><div class="tcard-author"><div class="author-avatar" style="background:#2e1a00">🎭</div><div><div class="author-name">LA Times</div><div class="author-role">Theater Review, 2023</div></div></div></div>
+      <div class="tcard" aria-hidden="true"><div class="tcard-stars">★★★★★</div><p class="tcard-text">"Debbie's comedic timing is impeccable — she finds the joke in every silence. A genuine rising star."</p><div class="tcard-author"><div class="author-avatar" style="background:#002e1a">📺</div><div><div class="author-name">IndieWire</div><div class="author-role">TV Roundup, 2024</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" data-i18n="sec-contact">Contact</div>
+  <h2 data-i18n="contact-h2">LET'S MAKE<br>SOMETHING <span style="color:var(--pink)">GREAT</span></h2>
+  <p data-i18n="contact-p">Based in London, available for film, TV, stage, stand-up, voiceover, and brand partnerships. Originally from Argentina — bilingual in English &amp; Spanish.</p>
+  <form class="contact-form" id="contact-form" method="POST">
+    <label class="visually-hidden" for="f-name" data-i18n="f-name">Your name</label>
+    <input type="text" name="name" id="f-name" data-i18n-ph="f-name" placeholder="Your name" autocomplete="name" required />
+    <label class="visually-hidden" for="f-email" data-i18n="f-email">Your email</label>
+    <input type="email" name="email" id="f-email" data-i18n-ph="f-email" placeholder="Your email" autocomplete="email" required />
+    <label class="visually-hidden" for="f-message" data-i18n="f-message">Your message</label>
+    <textarea name="message" id="f-message" data-i18n-ph="f-message" placeholder="Your message" required></textarea>
+    <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <input type="hidden" name="_subject" value="New message from debbie website" />
+    <button type="submit" class="btn btn-dark" id="btn-send" data-i18n="btn-send">📧 Send Message</button>
+    <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+  </form>
+  <div class="contact-btns">
+    <a href="assets/press-kit.pdf" download class="btn btn-pink" id="btn-presskit" data-i18n="btn-presskit" hidden>📄 Download Press Kit</a>
+  </div>
+  <div class="social-links">
+    <a class="social-link" data-social="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">📸</a>
+    <a class="social-link" data-social="youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">▶️</a>
+    <a class="social-link" data-social="imdb" href="#" target="_blank" rel="noopener" aria-label="IMDb" title="IMDb">🎬</a>
+    <a class="social-link" data-social="spotlight" href="#" target="_blank" rel="noopener" aria-label="Spotlight profile" title="Spotlight">⭐</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">DEBBIE</span>
+  <p data-i18n="footer-cr">© 2026 Debbie. All rights reserved.</p>
+  <p data-i18n="footer-loc">London-based · Originally from Argentina</p>
+</footer>
+
+<!-- VIDEO POPUP -->
+<div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close video">×</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-title" id="modal-title"></div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
