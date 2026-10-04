@@ -1,100 +1,160 @@
-# Debbie — Portfolio Website
+# Debbie Frascino — Actress & Comedian
 
-A static site (plain HTML + CSS + JavaScript, no build step), bilingual EN/ES.
+Portfolio website for Debbie Frascino, an Argentine actress and stand-up comedian based in London.
+Bilingual (English / Spanish), mobile-friendly, and built without any frameworks.
 
-## Folder structure
+**Live site:** 
 
-```
-debbie-portfolio/
-├── index.html        ← page content
-├── css/style.css     ← all styling
-├── js/config.js      ← ★ SETTINGS: the only file you need to edit to go live
-├── js/main.js        ← behaviour (language, menu, video popup, form…)
-├── images/           ← photos (hero, reel thumbnails, social share image)
-├── assets/           ← put press-kit.pdf here
-├── videos/           ← optional: self-hosted .mp4 clips
-└── favicon.svg
-```
+---
 
-## What works
+## Tech stack
+
+- **HTML, CSS, vanilla JavaScript**: no framework and no build step
+- **Formspree**: sends contact form messages to Debbie's email
+- **YouTube / Vimeo / Instagram embeds**: showreel videos play in a popup
+- **GitHub Pages**: hosting
+
+## Features
 
 | Feature | How it works |
 |---|---|
-| EN / ES switch | Whole page translates, remembers the choice, auto-picks Spanish for Spanish-language browsers |
-| Showreel | Clicking a clip opens a video popup (YouTube, Vimeo or .mp4). Shows "Coming soon" if no link yet. Esc / × / click outside closes it |
-| Contact form | Sends via Formspree without leaving the page, has spam protection (honeypot) |
-| Social icons | Only shown when a link is set |
-| Press kit button | Only shown once `assets/press-kit.pdf` exists |
-| Mobile | Burger menu, one-column layout, no custom cursor on touch screens |
-| Accessibility | Keyboard-friendly, screen-reader labels, respects "reduce motion" |
+| EN / ES language switch | Translates the whole page, remembers the choice, and picks Spanish automatically for Spanish-language browsers |
+| Showreel popup | Plays YouTube, Vimeo, Instagram or .mp4 links. Instagram reels open in a tall (portrait) popup. Shows "Coming soon" if no link is set |
+| Contact form | Sends through Formspree without reloading the page. Has a hidden honeypot field against spam bots |
+| Selected Works | 8 highlight credit cards, plus **Training** and **See all credits** dropdowns (HTML `<details>`, no JavaScript) |
+| Media kit | Download button that only shows once `assets/press-kit.pdf` exists |
+| Social links | YouTube and Spotlight icons. Any link left empty in the config is hidden |
+| Mobile | Burger menu, one-column layout, and the custom cursor is turned off on touch screens |
+| Accessibility | Keyboard-friendly, screen-reader labels, and respects the "reduce motion" setting |
 
-## Step 1: Run it locally
+## Project structure
 
-Opening `index.html` directly works, but a local server behaves like the real site:
+```
+debbie-portfolio/
+├── index.html          ← all page content
+├── css/style.css       ← all styling
+├── js/config.js        ← ★ settings: form ID, video links, social links, media kit
+├── js/main.js          ← behaviour + EN/ES translations
+├── images/             ← hero photo, showreel thumbnails, social share image
+├── assets/             ← press-kit.pdf (media kit)
+├── videos/             ← optional self-hosted .mp4 clips
+├── favicon.svg
+├── package.json        ← only used for `npm run start` (local server)
+└── .gitignore          ← keeps node_modules out of git
+```
+
+---
+
+## Run it locally
 
 ```bash
-cd debbie-portfolio
-python3 -m http.server 8000
+npm run start
 ```
-Then open http://localhost:8000. (Or use the **Live Server** extension in VS Code.)
+Then open http://localhost:3000.
 
-## Step 2: Connect the contact form (free, about 5 min)
+Use the local server rather than double-clicking `index.html`. Some features (the media kit button, YouTube embeds) only work when the page comes from a server.
 
-1. Go to https://formspree.io and sign up with the email where Debbie wants to get messages.
-2. Click **New Form** and give it a name.
-3. Copy the ID from the endpoint: `https://formspree.io/f/`**`xyzabcd`**
-4. In `js/config.js` set `formspreeId: 'xyzabcd'`.
-5. Send yourself a test message from the live site. The first one asks you to confirm the email.
+---
 
-Free plan: 50 submissions/month.
+## Settings: `js/config.js`
 
-## Step 3: Add the showreel videos
+This is the only file you need to touch for links and integrations.
 
-Easiest: upload to YouTube (can be **Unlisted**) or Vimeo, then paste the normal link into `js/config.js`:
+| Setting | What to put |
+|---|---|
+| `formspreeId` | The ID from your Formspree endpoint, e.g. `https://formspree.io/f/xpwzabcd` → `'xpwzabcd'` |
+| `videos.acting` / `standup` / `hosting` | A normal YouTube, Vimeo or Instagram link (or `'videos/clip.mp4'`) |
+| `social.youtube` / `spotlight` / `instagram` / `imdb` | Full profile URLs. Leave one as `''` to hide its icon |
+| `pressKit` | Path to the media kit PDF (default `'assets/press-kit.pdf'`) |
 
-```js
-videos: {
-  acting:  'https://www.youtube.com/watch?v=XXXXXXXXXXX',
-  standup: 'https://youtu.be/XXXXXXXXXXX',
-  hosting: 'https://vimeo.com/123456789',
-},
-```
-Self-hosting an .mp4 also works (`'videos/hosting.mp4'`), but keep files small (under ~20 MB).
+To add a **new social icon**, add the link to `social:` in the config **and** a matching
+`<a class="social-link" data-social="name" ...>` in `index.html`. The names must match.
 
-## Step 4: Social links + press kit
+**Videos:** for YouTube, check that **Allow embedding** is turned on in YouTube Studio (Details → Show more).
+Unlisted videos work fine. Instagram posts must be public.
 
-- Fill in `social:` in `js/config.js` (empty ones stay hidden).
-- Drop the PDF in `assets/` as `press-kit.pdf`.
-
-## Step 5: Put it online
-
-**Option A: Netlify Drop (quickest, no account needed to try)**
-1. Go to https://app.netlify.com/drop
-2. Drag the whole `debbie-portfolio` folder onto the page. It's live in seconds.
-3. Create a free account to keep it and rename the address (e.g. `debbie-actress.netlify.app`).
-
-**Option B: GitHub Pages (good for your own portfolio too)**
-```bash
-cd debbie-portfolio
-git init
-git add .
-git commit -m "Debbie portfolio site"
-git branch -M main
-git remote add origin https://github.com/<your-username>/debbie-portfolio.git
-git push -u origin main
-```
-Then on GitHub: **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**.
-The site appears at `https://<your-username>.github.io/debbie-portfolio/` after about a minute.
-
-**Custom domain (optional):** buy e.g. `debbie.com` (Namecheap, Cloudflare, ~£10/yr), then add it under Netlify *Domain settings* or GitHub *Pages → Custom domain*. HTTPS is free on both.
-
-## Step 6: After it's live
-
-- In `index.html`, change `og:image` to the full URL (e.g. `https://debbie.com/images/og-image.jpg`) so link previews on WhatsApp/LinkedIn show her photo.
-- Test the form, each video and the EN/ES switch on your phone.
+---
 
 ## Editing content
 
-- **Text:** change it in `index.html`. If it has a `data-i18n="key"`, also update both the `en` and `es` versions of that key at the top of `js/main.js` (the JS overwrites the HTML text when the page loads).
-- **Credits / press quotes:** plain HTML in `index.html`. Copy a `<div class="credit-card …">` block to add one.
-- **Photos:** replace files in `images/` with the same names (JPG, around 800–1000 px wide).
+### Text and translations (the "two places" rule)
+Any element with `data-i18n="key"` has its text in **two** places:
+1. `index.html`: the default text (what Google reads)
+2. `js/main.js`: the `en:` **and** `es:` blocks at the top
+
+The JavaScript overwrites the HTML when the page loads, so if you only change the HTML, the old text comes back.
+Always update all three: the HTML, `en` and `es`.
+
+### Credits
+- **Highlight cards:** in `index.html`, copy a `<div class="credit-card reveal">…</div>` block and edit it.
+  Type labels: `type-tv`, `type-film`, `type-stage`, `type-comedy`, `type-ad`.
+- **Full list / Training:** each row is one line with three columns (year, title + role, company):
+  ```html
+  <li><span>2024</span><span><b>Title</b>Role</span><span>Company</span></li>
+  ```
+  Keep the third `<span></span>` even when it's empty, so the columns stay aligned.
+
+### Photos
+- Use **lowercase file names without spaces**: the live server is case-sensitive (`Hero.JPG` ≠ `hero.jpg`).
+- Resize to about 800–1000 px wide and compress (e.g. [squoosh.app](https://squoosh.app)), aiming for under ~200 KB each.
+- Showreel thumbnails: replace `images/reel-acting.jpg`, `reel-standup.jpg`, `reel-hosting.jpg` using the same names, and no code changes are needed.
+- If a photo crops badly, adjust `object-position` (e.g. `center`, `center top`, `center 30%`).
+
+### Media kit
+Export it as **PDF Standard** (under 5 MB) and save it as `assets/press-kit.pdf`.
+
+---
+
+## Deployment: GitHub Pages
+
+**First time:**
+1. Create a **public** repo on GitHub (without a README, since this one already exists).
+2. Push the code:
+   ```bash
+   git remote add origin https://github.com/YOURNAME/REPO-NAME.git
+   git branch -M main
+   git push -u origin main
+   ```
+3. In the repo, go to **Settings → Pages → Deploy from a branch → `main` / `(root)` → Save**.
+4. After 1–2 minutes the site is live at `https://YOURNAME.github.io/REPO-NAME/`.
+5. Update the `og:image` meta tag in `index.html` to the **full** URL of `images/og-image.jpg`, so link previews on WhatsApp and LinkedIn show the photo.
+
+**Every update after that:**
+```bash
+git add .
+git commit -m "describe the change"
+git push
+```
+The live site updates automatically within about a minute. If you still see the old version, press **Ctrl+F5**.
+
+**Other free hosts that work:** Cloudflare Pages (unlimited bandwidth, good with a custom domain) and Netlify.
+Avoid Vercel's free plan for this site, because it doesn't allow commercial use.
+
+---
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `npm run start` → "Could not read package.json" | You're in the wrong folder. `cd` into the folder that has `index.html` |
+| Form says "isn't connected yet" | `formspreeId` is empty or unsaved in `config.js`. Save the file and press Ctrl+F5 |
+| Form sends but no email arrives | Debbie must confirm the Formspree verification email. Check spam too |
+| Changes don't show | Hard refresh with **Ctrl+F5** (the browser cached the old file) |
+| Image works locally but not online | The file name's capital letters don't match the code |
+| Video popup says "Video unavailable" | Embedding is turned off on YouTube, or the video is age-restricted |
+| Media kit button missing | The PDF isn't at `assets/press-kit.pdf`, or you opened the file directly instead of using a server |
+| Page blank or not translating | A syntax error in `main.js` (missing comma or quote). Check F12 → Console |
+
+---
+
+## Content checklist before launch
+
+- [ ] Replace the placeholder press quotes with real reviews
+- [ ] Confirm the Trasnoche 26 year (Spotlight says 2021, Mandy says 2023)
+- [ ] Confirm the "Social followers" number
+- [ ] Add the showreel video links
+- [ ] Send a test message from the live site
+
+---
+
+Built by **Iryna Greshchuk**, 2026.
