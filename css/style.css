@@ -818,3 +818,11 @@ body.no-scroll { overflow: hidden; }
   .credit-list li { grid-template-columns: 52px 1fr; }
   .credit-list li span:last-child { grid-column: 2; margin-top: -.6rem; font-size: .82rem; }
 }
+
+/* Training dropdown: sits right under the cards, list gets a little space */
+.full-credits.training .credit-list { margin-top: 1.5rem; }
+.full-credits + .full-credits { margin-top: 1rem; }
+
+/* Instagram reels are tall (9:16), so the popup switches to a portrait shape */
+.modal.portrait .modal-box { width: min(420px, 100%); }
+.modal.portrait .modal-media { aspect-ratio: auto; height: min(78vh, 760px); background: #fff; }

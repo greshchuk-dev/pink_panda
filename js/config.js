@@ -16,9 +16,9 @@ window.SITE_CONFIG = {
   // Paste a normal YouTube or Vimeo link, or a path to an .mp4
   // file you put in the /videos folder (e.g. 'videos/standup.mp4').
   videos: {
-    acting:  '',   // e.g. 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
-    standup: '',   // e.g. 'https://vimeo.com/123456789'
-    hosting: '',   // e.g. 'videos/hosting.mp4'
+    acting:  'https://www.instagram.com/reel/DWReQoFDEEC/?stkn=amh0MTZydWlmcHFv',   // e.g. 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
+    standup: 'https://www.instagram.com/reel/DbEOtWOuevx/?stkn=NXZvZGE1YmxjdjZx',   // e.g. 'https://vimeo.com/123456789'
+    hosting: 'https://www.instagram.com/reel/DOQvevkDLgF/?stkn=MXJ2cG1idGtna3Y5Ng%3D%3D',   // e.g. 'videos/hosting.mp4'
   },
 
   // 3. SOCIAL LINKS

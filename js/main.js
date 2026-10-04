@@ -41,8 +41,8 @@
 
       'sec-about':  'About',
       'about-h2':   'THE WOMAN.<br>THE MYTH.<br>THE <span style="color:var(--yellow)">LAUGHS.</span>',
-      'about-p1':   'Debbie is an Argentine-born actress and comedian who now calls London home. With a knack for finding the funny in the heartbreaking and the heart in the hilarious, she brings a unique cross-cultural perspective to every stage and screen.',
-      'about-p2':   'From Buenos Aires to London\'s vibrant comedy scene, Debbie has honed her craft across continents — delivering performances full of warmth, wit, and disarming honesty.',
+      'about-p1':   'Debbie is an Argentine actress and stand-up comedian based in London. She has been performing since the age of ten — from Buenos Aires theatre to London stages and international comedy nights.',
+      'about-p2':   'Bilingual in English and Spanish, energetic and fearless, she brings heart and authentic storytelling to every role.',
       'sk-improv':  'Improv', 'sk-physical': 'Physical Comedy', 'sk-voice': 'Voiceover',
       'stat-years':   'Years performing',
       'stat-credits': 'Credits',
@@ -87,6 +87,8 @@
       'cat-stage': 'Theatre', 'cat-film': 'Film', 'cat-tv': 'Television',
       'cat-comedy': 'Comedy &amp; Improv', 'cat-ads': 'Commercials &amp; Modelling',
       'cat-voice': 'Radio &amp; Presenting', 'cat-video': 'Music Video',
+      'cat-training': 'Training', 'type-short': 'Short Film',
+      'role-journalist': 'Journalist', 'role-daughter': 'Daughter', 'role-comedian': 'Comedian',
 
       // Skills + stats (new)
       'sk-present': 'Presenting', 'sk-musical': 'Musical Theatre', 'sk-jazz': 'Jazz Dance',
@@ -117,8 +119,8 @@
 
       'sec-about':  'Sobre mí',
       'about-h2':   'LA MUJER.<br>EL MITO.<br>LAS <span style="color:var(--yellow)">RISAS.</span>',
-      'about-p1':   'Debbie es actriz y comediante de origen argentino, actualmente radicada en Londres. Con un talento especial para encontrar la comedia en lo desgarrador y el corazón en lo hilarante, aporta una perspectiva intercultural única a cada escenario y pantalla.',
-      'about-p2':   'De Buenos Aires a la vibrante escena del comedy londinense, Debbie ha perfeccionado su arte en dos continentes — con actuaciones llenas de calidez, ingenio y honestidad.',
+      'about-p1':   'Debbie es actriz y comediante de stand-up argentina, radicada en Londres. Actúa desde los diez años — del teatro de Buenos Aires a los escenarios de Londres y noches de comedia internacionales.',
+      'about-p2':   'Bilingüe en inglés y español, enérgica y sin miedo, aporta corazón y una narrativa auténtica a cada papel.',
       'sk-improv':  'Improvisación', 'sk-physical': 'Comedia física', 'sk-voice': 'Locución',
       'stat-years':   'Años en escena',
       'stat-credits': 'Créditos',
@@ -155,6 +157,8 @@
       'form-ok':     '✓ ¡Gracias! Tu mensaje fue enviado.',
       'form-err':    'Algo salió mal. Inténtalo de nuevo o escribe directamente.',
       'form-notset': 'El formulario aún no está conectado — añade el ID de Formspree en js/config.js.',
+      'cat-training': 'Formación', 'type-short': 'Cortometraje',
+      'role-journalist': 'Periodista', 'role-daughter': 'Hija', 'role-comedian': 'Comediante',
 
       // Créditos (nuevo)
       'credits-all': 'Ver todos los créditos',
@@ -280,6 +284,9 @@
     if (/\.(mp4|webm|mov)(\?.*)?$/i.test(url)) {
       return { type: 'video', src: url };
     }
+    if ((m = url.match(/instagram\.com\/(?:p|reel|reels|tv)\/([\w-]+)/))) {
+      return { type: 'iframe', src: `https://www.instagram.com/p/${m[1]}/embed/`, portrait: true };
+    }
     return { type: 'iframe', src: url };
   }
 
@@ -292,8 +299,10 @@
 
     if (!url) {
       modalMedia.innerHTML = `<div class="modal-empty"><strong>${t('video-soon')}</strong>${t('video-soon-sub')}</div>`;
+      modal.classList.remove('portrait');
     } else {
       const embed = toEmbed(url);
+        modal.classList.toggle('portrait', !!embed.portrait);
       let el;
       if (embed.type === 'video') {
         el = document.createElement('video');
