@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   // 1. CONTACT FORM
   // Sign up free at https://formspree.io → New form → copy the ID
   // from the endpoint, e.g. https://formspree.io/f/xyzabcd → 'xyzabcd'https://formspree.io/f/mgavqokl
-  formspreeId: 'mgavqokl',
+  formspreeId: 'mvkzbdya',
 
   // 2. SHOWREEL VIDEOS
   // Paste a normal YouTube or Vimeo link, or a path to an .mp4
