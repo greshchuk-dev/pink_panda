@@ -11,26 +11,28 @@ window.SITE_CONFIG = {
   // Sign up free at https://formspree.io → New form → copy the ID
   // from the endpoint, e.g. https://formspree.io/f/xyzabcd → 'xyzabcd'https://formspree.io/f/mgavqokl
   formspreeId: 'mvkzbdya',
-
-  // 2. SHOWREEL VIDEOS
-  // Paste a normal YouTube or Vimeo link, or a path to an .mp4
+ // 2. SHOWREEL VIDEOS
+  // Paste a normal YouTube, Vimeo or Instagram link, or a path to an .mp4
   // file you put in the /videos folder (e.g. 'videos/standup.mp4').
+  // Remove tracking codes like ?si=... or ?stkn=... from the end.
   videos: {
-    acting:  'https://www.instagram.com/reel/DWReQoFDEEC/?stkn=amh0MTZydWlmcHFv',   // e.g. 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
-    standup: 'https://www.instagram.com/reel/DbEOtWOuevx/?stkn=NXZvZGE1YmxjdjZx',   // e.g. 'https://vimeo.com/123456789'
-    hosting: 'https://www.instagram.com/reel/DOQvevkDLgF/?stkn=MXJ2cG1idGtna3Y5Ng%3D%3D',   // e.g. 'videos/hosting.mp4'
+    acting:  'https://www.youtube.com/watch?v=w8xY_LNZcmk',
+    standup: 'https://www.instagram.com/reel/DbEOtWOuevx/',
+    hosting: 'https://www.instagram.com/reel/DOQvevkDLgF/',
   },
-
+ 
   // 3. SOCIAL LINKS
+  // Leave as '' to hide the icon.
   social: {
-  instagram: 'https://www.instagram.com/debbiefrascino?stkn=MTdpNnRzODVqajJ4Ng%3D%3D',
-  youtube:   'https://www.youtube.com/@DebbieFrascino',
-  imdb:      '',
-  spotlight: 'https://app.spotlight.com/5092-9055-9497',
-},
-
+    instagram: 'https://www.instagram.com/debbiefrascino/',
+    youtube:   'https://www.youtube.com/@DebbieFrascino',
+    imdb:      '',
+    spotlight: 'https://app.spotlight.com/5092-9055-9497',
+  },
+ 
   // 4. PRESS KIT
   // Put the PDF in the /assets folder and keep this path,
   // or set to '' to hide the button until it's ready.
   pressKit: 'assets/press-kit.pdf',
 };
+ 
